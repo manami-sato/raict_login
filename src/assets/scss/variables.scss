@@ -1,0 +1,23 @@
+$mainColor: #65029a;
+$copywrightColor: #18003e;
+$btnColor: #e72eff;
+$black: #0b0b0b;
+
+@mixin wrapSet($m:0 auto) {
+  background: #181e2f;
+  border: #707070 1px solid;
+  border-radius: 8px;
+  margin: $m;
+}
+
+@mixin btnSet() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 56px;
+  background: $btnColor;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border-radius: 28px;
+}
