@@ -1,7 +1,7 @@
 <template lang="pug">
-	div.mypageLive
+	router-link(:to="{name:'Live'}").mypageLive
 		div.mypageLive__img
-			img(:src="`https://click.ecc.ac.jp/ecc/msatou/raict_app/img/${res.img}`")
+			img(:src="`${appImgPath}${res.img}`")
 		div.mypageLive__info
 			p.mypageLive__info--name {{res.artistName}}
 			p.mypageLive__info--ttl {{res.ttl}}
@@ -16,8 +16,10 @@
 </template>
 
 <script>
+import Mixin from "@/mixins/Mixin.vue";
 export default {
   name: "MypageLive",
+  mixins: [Mixin],
   props: ["id"],
   data() {
     return {
@@ -33,12 +35,12 @@ export default {
     };
   },
   mounted() {
-    fetch("https://click.ecc.ac.jp/ecc/msatou/raict_app/products.php")
+    fetch(`${this.productsData}`)
       .then((res) => {
         return res.json();
       })
       .then((json) => {
-        this.res = json.event[this.id - 1];
+        this.res = json.event[this.id];
         this.fromYear = this.res.date.from.year;
         this.fromMonth = this.res.date.from.month;
         this.fromDay = this.res.date.from.day;

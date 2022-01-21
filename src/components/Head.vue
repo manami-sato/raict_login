@@ -1,12 +1,14 @@
 <template lang="pug">
 	header.head
 		h1.head__logo
-			img(src="https://click.ecc.ac.jp/ecc/msatou/raict_lp/img/logo_color.png",alt="raict")
+			img(:src="`${path}img/logo_color.png`",alt="raict")
 </template>
 
 <script>
+import Mixin from "@/mixins/Mixin.vue";
 export default {
   name: "Head",
+  mixins: [Mixin],
 };
 </script>
 

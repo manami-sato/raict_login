@@ -1,26 +1,29 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import VueHead from "vue-head";
-import Signin from "../views/Signin.vue";
+import Login from "../views/Login.vue";
 import Mypage from "../views/Mypage.vue";
 import Live from "../views/Live.vue";
 
 Vue.use(VueRouter);
 Vue.use(VueHead);
 
+const route = "/ecc/msatou/raict_login/";
+// /ecc/msatou/raict_login/
+
 const routes = [
   {
-    path: "/",
-    name: "Signin",
-    component: Signin,
+    path: `${route}`,
+    name: "Login",
+    component: Login,
   },
   {
-    path: "/mypage",
+    path: `${route}mypage`,
     name: "Mypage",
     component: Mypage,
   },
   {
-    path: "/live",
+    path: `${route}live`,
     name: "Live",
     component: Live,
   },

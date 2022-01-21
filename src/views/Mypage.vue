@@ -14,9 +14,10 @@ import Head from "@/components/Head.vue";
 import Headline from "@/components/Headline.vue";
 import MypageLive from "@/components/MypageLive.vue";
 import Foot from "@/components/Foot.vue";
-
+import Mixin from "@/mixins/Mixin.vue";
 export default {
   name: "Home",
+  mixins: [Mixin],
   components: {
     Head,
     Headline,
@@ -26,24 +27,20 @@ export default {
   data() {
     return {
       res: [],
-      events: [1],
-      // eventRandumId: 0,
-      eventId: 0,
       headline: ["TODAY'S LIVE", "OTHER'S LIVE"],
+      events: [[0], []],
     };
   },
   mounted() {
-    fetch("https://click.ecc.ac.jp/ecc/msatou/raict_app/products.php")
+    fetch(`${this.productsData}`)
       .then((res) => {
         return res.json();
       })
       .then((json) => {
         this.res = json.event;
-        // this.eventRandumId = Math.floor(
-        //   Math.random() * (this.res.length - 1) + 1
-        // );
-        this.eventId = this.res.length;
-        this.events.push(this.eventId);
+        for (let i = 0; i < this.res.length; i++) {
+          this.events[1].push(i);
+        }
       });
   },
 };
