@@ -8,7 +8,7 @@ import Live from "../views/Live.vue";
 Vue.use(VueRouter);
 Vue.use(VueHead);
 
-const route = "/ecc/msatou/raict_login/";
+const route = "manami-sato.github.io/raict_login/";
 // /ecc/msatou/raict_login/
 
 const routes = [
