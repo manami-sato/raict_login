@@ -2,14 +2,14 @@
 	footer.foot
 		div.foot__contents
 			div.foot__contents--icon
-				img(:src="`${path}img/foot_app_icon.png`",alt="raict")
+				img(:src="`${webImgPath}foot_app_icon.png`",alt="raict")
 			p.foot__contents--txt raictでオンラインライブを楽しもう！
 			div.foot__contents--link
-				img(:src="`${path}img/foot_app_link.png`",alt="raict")
+				img(:src="`${webImgPath}foot_app_link.png`",alt="raict")
 		div.foot__copy
 			div
 				div.foot__copy--logo
-					img(:src="`${path}img/logo_color.png`",alt="raict")
+					img(:src="`${webImgPath}logo_color.png`",alt="raict")
 				div
 					ul.foot__copy--link
 						li

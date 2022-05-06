@@ -1,7 +1,7 @@
 <template lang="pug">
 	header.head
 		h1.head__logo
-			img(:src="`${path}img/logo_color.png`",alt="raict")
+			img(:src="`${webImgPath}logo_color.png`",alt="raict")
 </template>
 
 <script>

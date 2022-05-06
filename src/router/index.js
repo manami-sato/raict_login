@@ -9,6 +9,7 @@ Vue.use(VueRouter);
 Vue.use(VueHead);
 
 const route = "manami-sato.github.io/raict_login/";
+// const route = "/";
 
 const routes = [
   {

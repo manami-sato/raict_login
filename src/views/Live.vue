@@ -3,7 +3,7 @@
     Head
     Headline(ttl="ONLINE LIVE",jp="オンラインライブ")
     div.live__play
-      video(:src="`${path}img/movie.mp4`",controls)
+      video(:src="`${path}movie.mp4`",controls)
     Foot
 </template>
 
